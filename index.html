@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar-container">
+        <div class="sidebar">
+            <div class="date" id="live-date"></div>
+            <div class="support-contact">
+                <a href="#">Support</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="sidebar-button"></div>
+    </div>
+
+    <!-- Landing Page -->
+    <div id="landing-page" class="center">
+        <div>
+            <h1>WeatherWise</h1>
+            <h3>Navigate the Skies with Confidence</h3>
+        </div>
+        <button id="get-weather-btn" class="btn">Get Weather</button>
+    </div>
+
+    <!-- Weather App -->
+    <div id="weather-app" class="container">
+        <h1>Get Weather Info</h1>
+        <form id="weather-form">
+            <input type="text" id="city" placeholder="Enter city name" required>
+            <button type="submit" class="btn">Get Weather</button>
+        </form>
+        <button id="unit-toggle">Toggle °C/°F</button>
+        <button id="geo-button">Use My Location</button>
+        <div id="weather-result"></div>
+        <div id="forecast-result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

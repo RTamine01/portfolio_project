@@ -1,0 +1,180 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333;
+    max-width: 550px;
+    width: 100%;
+    display: none;
+}
+
+.container.active {
+    display: block;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.forecast-day {
+    text-align: center;
+    margin: 10px;
+}
+
+.forecast-day img {
+    width: 50px;
+    height: 50px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#unit-toggle, #geo-button {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#unit-toggle:hover, #geo-button:hover {
+    background: linear-gradient(135deg, #ff5722, #ff9800);
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.weather-icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+}
+
+h1 {
+    position: relative;
+    top: 15px;
+}
+
+/* Sidebar Styles */
+.sidebar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(135deg, #333, #444);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+    background-image: url('https://via.placeholder.com/250');
+    background-size: cover;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.sidebar .date {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 18px;
+}
+
+.support-contact {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
+
+.support-contact a {
+    display: block;
+    margin: 5px 0;
+}
+
+.sidebar-button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.sidebar-container:hover {
+    width: 250px;
+}
+
+.sidebar-container:hover .sidebar-button {
+    background: rgba(0, 0, 0, 0.7);
+}
